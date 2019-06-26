@@ -99,8 +99,9 @@ Usage for 'material' preset
 
         const frame = jsFrame.create({
             name: `Win2`,
-            title: `Material style`,
-            left: 360, top: 40, width: 320, height: 220, minWidth: 200, minHeight: 110,
+            title: `操作`,
+            // left: 360, top: 40, width: 320, height: 220, minWidth: 200, minHeight: 110,
+            left: 360, top: 40, width: 300, height: 220, minWidth: 200, minHeight: 110,
             appearanceName: 'material',
             appearanceParam: {
                 border: {
@@ -111,7 +112,8 @@ Usage for 'material' preset
                 titleBar: {
                     color: 'white',
                     background: '#4784d4',
-                    leftMargin: 40,
+                    // leftMargin: 40,
+                    leftMargin: 10,
                     height: 30,
                     fontSize: 14,
                     buttonWidth: 36,
@@ -156,7 +158,19 @@ Usage for 'material' preset
                 width: '100%',
             },
 
-            html: '<img style="margin: auto;position: absolute;top: 0;left: 0;right: 0;bottom: 0;width:100%;height:auto" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/I-40W-Sunflowers.jpg">'
+            // html: '<img style="margin: auto;position: absolute;top: 0;left: 0;right: 0;bottom: 0;width:100%;height:auto" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/I-40W-Sunflowers.jpg">'
+            // html: `<div>あああてすと<img style="margin: auto;position: absolute;top: 0;left: 0;right: 0;bottom: 0;width:100%;height:auto" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/I-40W-Sunflowers.jpg">てすと</div>`
+            html: '<div class="container py-0">' +
+                '<div class="py-1 px-1 text-center">\n' +
+                // '<h4>My contents</h4>\n' +
+                // '<p class="lead">Your contents here</p>\n' +
+                '<div class="col-12 text-center">\n' +
+                '<button id="my_button_01" type="button" class="btn btn-primary">複製</button>\n' +
+                '<button id="my_button_02" type="button" class="btn btn-secondary">回転</button>\n' +
+                '<button id="my_button_03" type="button" class="btn btn-success">削除</button>\n' +
+                '<button id="my_button_04" type="button" class="btn btn-info">ああ</button>\n' +
+                '<select class="btn btn-info"><option value="耐力壁">耐力壁</option><option value="間仕切り壁">間仕切り壁</option></select>\n' +
+                '</div></div></div>'
         }).show();
 
 
